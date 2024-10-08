@@ -1,7 +1,6 @@
-package com.parabank.pages;
+package com.saucedemo.pages;
 
-import com.parabank.base.TestBase;
-import org.openqa.selenium.WebDriver;
+import com.saucedemo.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
