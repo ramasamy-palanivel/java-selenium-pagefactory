@@ -1,7 +1,7 @@
-package com.parabank.tests;
+package com.saucedemo.tests;
 
-import com.parabank.base.TestBase;
-import com.parabank.pages.LoginPage;
+import com.saucedemo.base.TestBase;
+import com.saucedemo.pages.LoginPage;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -11,9 +11,6 @@ import java.io.IOException;
 public class LoginPageTest extends TestBase {
     LoginPage loginPage;
 
-    public LoginPageTest() throws IOException {
-        super();
-    }
     @BeforeMethod
     public void setUp() throws IOException {
         initialization();
@@ -25,6 +22,14 @@ public class LoginPageTest extends TestBase {
         loginPage.clickSubmit();
         String err = loginPage.getErrorMessage();
         System.out.println("======>>>> " + err);
+        String url = (String) testData.get("url");
+        String browser = (String) testData.get("browser");
+        String uName = (String) testData.get("username");
+        String pwd = (String) testData.get("password");
+        System.out.println(url);
+        System.out.println(browser);
+        System.out.println(uName);
+        System.out.println(pwd);
     }
 
     @AfterMethod
